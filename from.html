@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo_mainpng.png" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>javaproject</title>
+</head>
+
+<body>
+
+
+    <form id="form">
+        <fieldset class="form">
+
+            <div class="div">
+                <div class="div2">
+                    <Legend> <i class="fa-solid fa-circle-user"></i></Legend>
+                    <h1 style="text-align: center;">SIGN UP </h1>
+                    <div>
+                        <label for="">Your Name</label>
+                        <input type="text" placeholder="first name" id="name" required>
+
+                    </div>
+                    <div>
+                        <label for="">Your age</label>
+                        <input type="" placeholder="enter your age" id="age" required>
+                    </div>
+                    <div>
+                        <label for="">Your Email :</label>
+                        <input type="" placeholder="enter your Email " id="email" required>
+                    </div>
+                    <div>
+                        <label for="">password</label>
+                        <input placeholder="password" id="pass" required>
+                    </div>
+
+                    <button class="button" onclick="signup()" type="submit">SUBMIT</button>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script src="https://kit.fontawesome.com/b9bf39324e.js" crossorigin="anonymous"></script>
+<script>
+
+    function signup() {
+
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+
+        localStorage.setItem("name1", name)
+        localStorage.setItem("age1", age)
+        localStorage.setItem("email1", email)
+        localStorage.setItem("pass1", pass)
+
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("pass").value = "";
+
+        if (name.length > 0 && age > 0 && pass.length >= 4 && email.length > 4) {
+            // alert(name)
+            alert("user registered successfully...!!!");
+            window.location.href = "http://127.0.0.1:5500/TANVI%20-%20JAVA%20SCR-20230811T080236Z-001/TANVI%20-%20JAVA%20SCR/BURGER/login.html";
+        }
+
+        else {
+            alert("Please enter a valid detail")
+        }
+    }
+</script>
+
+</body>
+
+</html>

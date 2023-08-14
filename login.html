@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+
+<body>
+
+    <form id="form">
+        <fieldset class="form">
+
+            <div class="div">
+                <div class="div2">
+                    <Legend> <i class="fa-solid fa-circle-user"></i></Legend>
+                    <h1 style="text-align: center;">LOGIN FORM</h1>
+                 
+                    <div>
+                        <label for="">Your Email :</label>
+                        <input type="" placeholder="enter your Email " id="email" required>
+                    </div>
+                    <div>
+                        <label for="">password</label>
+                        <input placeholder="password" id="pass" required>
+                    </div>
+
+                    <button class="button" onclick="Redirect()" type="submit">SUBMIT</button>
+
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script src="https://kit.fontawesome.com/b9bf39324e.js" crossorigin="anonymous"></script>
+<script>
+
+var a=localStorage.getItem("abc");
+
+if(a=="save password"){
+    window.location.href="project.html";
+}
+
+
+   function Redirect() {
+
+
+
+      var email = document.getElementById("email").value;
+      var pass = document.getElementById("pass").value;
+
+      var email1 = localStorage.getItem("email1");
+      var pass1 = localStorage.getItem("pass1");
+
+      if (email == email1 && pass == pass1) {
+         alert("sign up success")
+         localStorage.setItem("code", "secret");
+         location.href = "http://127.0.0.1:5500/TANVI%20-%20JAVA%20SCR-20230811T080236Z-001/TANVI%20-%20JAVA%20SCR/BURGER/index.html";
+
+
+      } else {
+         alert("email and pass is incorrect")
+      }
+
+   }
+
+</script>
+
+
+</html>
